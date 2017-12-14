@@ -2,11 +2,9 @@ package main
 
 import (
     "fmt"
+    "os"
 )
 
 func main() {
-    nums := []int{1, 2, 3}
-    for idx, value := range nums {
-        fmt.Println("index: ", idx, " Value: ", value)
-    }
+    fmt.Println(os.Args[0])
 }
