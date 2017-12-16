@@ -4,32 +4,32 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "os"
+	"bufio"
+	"fmt"
+	"os"
 )
 
 func main() {
-    // declared
-    scanner := bufio.NewScanner(os.Stdin)
-    var text string
-    counts := make(map[rune]int)
+	// declared
+	scanner := bufio.NewScanner(os.Stdin)
+	var text string
+	counts := make(map[rune]int)
 
-    // Input
-    for text != "q" {
-        fmt.Print("Enter :")
-        scanner.Scan()
-        text = scanner.Text()
-        for idx, s := range text {
-            counts[s]++
-            fmt.Printf("%d : %c \n", idx, s)
-        }
+	// Input
+	for text != "q" {
+		fmt.Print("Enter :")
+		scanner.Scan()
+		text = scanner.Text()
+		for idx, s := range text {
+			counts[s]++
+			fmt.Printf("%d : %c \n", idx, s)
+		}
 
-        fmt.Printf("\n\n----------\n\n")
+		fmt.Printf("\n\n----------\n\n")
 
-        for line, n := range counts {
-            fmt.Printf("Value: %c, Count: %d\n", line, n)
-        }
-    }
+		for line, n := range counts {
+			fmt.Printf("Value: %c, Count: %d\n", line, n)
+		}
+	}
 
 }

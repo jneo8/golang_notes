@@ -1,12 +1,12 @@
 package main
 
 import (
-    "fmt"
-    "os"
-    "strings"
+	"fmt"
+	"os"
+	"strings"
 )
 
 func main() {
-    // see https://golang.org/pkg/strings/#Join
-    fmt.Println(strings.Join(os.Args[1:], ","))
+	// see https://golang.org/pkg/strings/#Join
+	fmt.Println(strings.Join(os.Args[1:], ","))
 }
